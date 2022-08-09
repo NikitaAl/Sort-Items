@@ -26,17 +26,24 @@ namespace SortItems
 
         public void LoadNextLevel()
         {
-            var idx = SceneManager.GetActiveScene().buildIndex;
-            var sceneCount = SceneManager.sceneCountInBuildSettings;
-            var nextLevel = (idx + 1) % sceneCount;
-            PlayerPrefs.SetInt("Level", nextLevel);
-            SceneManager.LoadScene(nextLevel);
+            // var idx = SceneManager.GetActiveScene().buildIndex;
+            // var sceneCount = SceneManager.sceneCountInBuildSettings;
+            // var nextLevel = (idx + 1) % sceneCount;
+            // PlayerPrefs.SetInt("Level", nextLevel);
+            // SceneManager.LoadScene(nextLevel);
 
         }
 
-       /* public void ReloadScene()
+        public void ReloadScene()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        } */
+        }
+
+        private void Update() {
+            if ( Input.GetKeyUp(KeyCode.R))
+            {
+                ReloadScene();          
+            }
+        }
     }
 }

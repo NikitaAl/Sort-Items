@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5144702468095722120}
   - component: {fileID: 6666741023428770626}
   - component: {fileID: 7263195149820259346}
-  - component: {fileID: 3267017482046466503}
-  m_Layer: 8
+  - component: {fileID: -2334668773263568301}
+  m_Layer: 0
   m_Name: Getter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,12 +93,12 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2385395867517442414}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 30.73, z: 0.75}
-  m_Center: {x: 0.000000047683717, y: -4.477788, z: -0.00000009536743}
---- !u!114 &3267017482046466503
+  m_Size: {x: 0.75, y: 40, z: 0.75}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-2334668773263568301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,3 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  onCountChanged:
+    m_PersistentCalls:
+      m_Calls: []
