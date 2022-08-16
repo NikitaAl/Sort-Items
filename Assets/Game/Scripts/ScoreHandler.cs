@@ -11,6 +11,7 @@ namespace SortItems
         // public GameObject OldPref;
         public GameObject currentScene;
         public GameObject scenePrefab;
+        private bool nextlevel;
 
         public UnityEvent onFull;
 
@@ -65,16 +66,13 @@ namespace SortItems
             {   
                 Debug.Log("You win!");
                 onFull.Invoke();
-                // Instantiate (NewPref, OldPref.transform.position, OldPref.transform.rotation); 
-                //     Destroy(OldPref); 
                 Destroy(currentScene);
-                ScenChenger();
+                if (currentScene)
+                {
+                    Instantiate(scenePrefab);
+                    return;
+                }
             }
-        }
-
-        private void ScenChenger()
-        {
-            currentScene = Instantiate(scenePrefab);
         }
 
     }

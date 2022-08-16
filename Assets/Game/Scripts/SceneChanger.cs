@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 namespace SortItems
 {
     public class SceneChanger : MonoBehaviour
     {
-        // public GameObject currentScene;
-        // public GameObject scenePrefab;
+
+        // [SerializeField] private GameObject[] level;
 
 
         private void Start() 
@@ -16,10 +17,18 @@ namespace SortItems
             // if (level != idx)
             // {
             //     LoadLevel(level);
-            // }  
-            // Destroy(currentScene);
-            // currentScene = Instantiate(scenePrefab);
+            // } 
+            // currentScene = Instantiate(scenePrefab); 
 
+            // if (nextlevel == false)
+            // {
+            //     Destroy(currentScene);
+
+            // }else 
+            // { 
+            //     nextlevel = true; 
+            // }
+            
         }
 
         // public void LoadLevel(int levelIdx)

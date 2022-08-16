@@ -4,24 +4,18 @@ namespace SortItems
 {
     public class LevelSwap : MonoBehaviour
     {
-        public GameObject NewPref;
-        public GameObject OldPref;
+        public GameObject currentScene;
+        public GameObject scenePrefab;
 
 
         
         void Start()
         {
-
+            Destroy(currentScene);
+            currentScene = Instantiate(scenePrefab);
         }
 
         
-        void Update()
-        {
-            if ( OldPref != null)
-            {
-                Instantiate (NewPref, OldPref.transform.position, OldPref.transform.rotation); 
-                Destroy(OldPref);
-            }   
-        }
+
     }
 }
