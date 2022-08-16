@@ -7,8 +7,10 @@ namespace SortItems
     {
         [SerializeField] private GetterParemeters[] _getters;
 
-        public GameObject NewPref;
-        public GameObject OldPref;
+        // public GameObject NewPref;
+        // public GameObject OldPref;
+        public GameObject currentScene;
+        public GameObject scenePrefab;
 
         public UnityEvent onFull;
 
@@ -60,13 +62,21 @@ namespace SortItems
             }
 
             if (full)
-            {
+            {   
                 Debug.Log("You win!");
                 onFull.Invoke();
-                Instantiate (NewPref, OldPref.transform.position, OldPref.transform.rotation); 
-                    Destroy(OldPref); 
+                // Instantiate (NewPref, OldPref.transform.position, OldPref.transform.rotation); 
+                //     Destroy(OldPref); 
+                Destroy(currentScene);
+                ScenChenger();
             }
         }
+
+        private void ScenChenger()
+        {
+            currentScene = Instantiate(scenePrefab);
+        }
+
     }
 
 
