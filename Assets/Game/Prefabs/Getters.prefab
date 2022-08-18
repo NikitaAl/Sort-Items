@@ -54,8 +54,8 @@ MonoBehaviour:
   - getter: {fileID: 3334513781869623067}
     targetCount: 1
     count: 0
-  NewPref: {fileID: 0}
-  OldPref: {fileID: 0}
+  currentScene: {fileID: 0}
+  scenePrefab: {fileID: 0}
   onFull:
     m_PersistentCalls:
       m_Calls:

@@ -1,17 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace SortItems
 {
     public class ScoreHandler : MonoBehaviour
     {
         [SerializeField] private GetterParemeters[] _getters;
-
-        // public GameObject NewPref;
-        // public GameObject OldPref;
+        
         public GameObject currentScene;
         public GameObject scenePrefab;
-        private bool nextlevel;
 
         public UnityEvent onFull;
 
@@ -66,15 +64,15 @@ namespace SortItems
             {   
                 Debug.Log("You win!");
                 onFull.Invoke();
+
                 Destroy(currentScene);
-                if (currentScene)
+
+                if ( currentScene != null)
                 {
-                    Instantiate(scenePrefab);
-                    return;
+                    currentScene = Instantiate(scenePrefab);                           
                 }
             }
         }
-
     }
 
 

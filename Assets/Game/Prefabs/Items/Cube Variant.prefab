@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 7697649466981799746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 130988304636247484}
   m_RootOrder: 0
@@ -104,6 +104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1896007021291719771, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3935187518204681187, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
       propertyPath: m_Name
       value: Cube Variant
@@ -151,6 +155,10 @@ PrefabInstance:
     - target: {fileID: 3935187518204681199, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395859722338165493, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace SortItems
@@ -7,12 +8,14 @@ namespace SortItems
     {
 
         [SerializeField] private float upForce = 50f;
+        [SerializeField]private ItemType _type;
+        public UnityEvent OnHideRequest;
 
         private Rigidbody _rigidbody;
 
+
         public bool isDraggable { get; private set; }
 
-        [SerializeField]private ItemType _type;
         public ItemType Type { get => _type; } 
 
         private void Start() 

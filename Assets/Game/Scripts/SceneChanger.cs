@@ -6,9 +6,8 @@ namespace SortItems
 {
     public class SceneChanger : MonoBehaviour
     {
-
-        // [SerializeField] private GameObject[] level;
-
+        // [SerializeField] private GameObject[] _levels;
+        // private GameObject _currentLevel;
 
         private void Start() 
         {
@@ -18,18 +17,45 @@ namespace SortItems
             // {
             //     LoadLevel(level);
             // } 
-            // currentScene = Instantiate(scenePrefab); 
-
-            // if (nextlevel == false)
-            // {
-            //     Destroy(currentScene);
-
-            // }else 
-            // { 
-            //     nextlevel = true; 
-            // }
-            
+            // LoadLevel();
+            // _currentLevel = Instantiate(_levels);
         }
+        
+
+        // public void LoadLevel()
+        // {
+        //     if ( _currentLevel != null)
+        //     Destroy(_currentLevel);
+
+        //     var idx = SceneManager.GetActiveScene().buildIndex;
+        //     var sceneCount = SceneManager.sceneCountInBuildSettings;
+        //     var nextLevel = (idx) % sceneCount;
+
+        //     _currentLevel = Instantiate(_levels[nextLevel]);
+        // }
+
+        // public void NextLevel()
+        // {
+        //     var idx = SceneManager.GetActiveScene().buildIndex;
+        //     var sceneCount = SceneManager.sceneCountInBuildSettings;
+        //     var nextLevel = (idx + 1) % sceneCount;
+        //     PlayerPrefs.SetInt("Level", nextLevel);
+
+        //     LoadLevel();
+        // }
+
+        public void ReloadScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        private void Update() {
+            if ( Input.GetKeyUp(KeyCode.R))
+            {
+                ReloadScene();          
+            }
+        }
+
 
         // public void LoadLevel(int levelIdx)
         // {
@@ -49,16 +75,5 @@ namespace SortItems
 
         // }
 
-        public void ReloadScene()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
-        private void Update() {
-            if ( Input.GetKeyUp(KeyCode.R))
-            {
-                ReloadScene();          
-            }
-        }
     }
 }
