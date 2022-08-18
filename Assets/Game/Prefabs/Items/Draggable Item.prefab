@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2181595182148639817}
   - component: {fileID: 7500865475814274966}
   - component: {fileID: 7228279664710004808}
+  - component: {fileID: 8182346820206415698}
   m_Layer: 0
   m_Name: Draggable Item
   m_TagString: Untagged
@@ -109,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _circleClickFxPrefab: {fileID: 2868450815165139291, guid: 7e96fd08a2954444091e2584535dfd76, type: 3}
+  _clickPoolProvider: {fileID: 8182346820206415698}
 --- !u!114 &7500865475814274966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +137,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vfxPool: {fileID: 11400000, guid: 93816e6399b1c794dbf46b5ef76f0988, type: 2}
+--- !u!114 &8182346820206415698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3935187518204681187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9a1e2252de6e442bacec309ffd9838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clickPool: {fileID: 11400000, guid: cbc0289f08b86ec418bd280d82b897a6, type: 2}
 --- !u!1 &6514379129749591706
 GameObject:
   m_ObjectHideFlags: 0
