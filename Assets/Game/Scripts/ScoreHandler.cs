@@ -12,6 +12,7 @@ namespace SortItems
         public GameObject scenePrefab;
 
         public UnityEvent onFull;
+        public GameObject _animator;
 
         private void Start() 
         {
@@ -26,6 +27,7 @@ namespace SortItems
                 getter.getter.SetCount(getter.targetCount);
                 getter.getter.onCountChanged.AddListener(OnCountChanged);
             }
+            
         }
 
         private void OnDestroy() 
@@ -63,14 +65,18 @@ namespace SortItems
             if (full)
             {   
                 Debug.Log("You win!");
+                _animator.SetActive(true);
+                Time.timeScale = 0f;
                 onFull.Invoke();
 
-                Destroy(currentScene);
+            //     Destroy(currentScene);
 
-                if ( currentScene != null)
-                {
-                    currentScene = Instantiate(scenePrefab);                           
-                }
+
+            //     if ( currentScene != null)
+            //     {
+            //         currentScene = Instantiate(scenePrefab);   
+                                       
+            //     }
             }
         }
     }

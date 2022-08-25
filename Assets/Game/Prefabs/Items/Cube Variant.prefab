@@ -104,6 +104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7919507848519606950, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
+      propertyPath: _meshRenderer
+      value: 
+      objectReference: {fileID: 7697649466981799744}
     - target: {fileID: 1896007021291719771, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -156,11 +160,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4249965007370584089, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
+      propertyPath: isFrom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249965007370584089, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[1].time
+      value: 0.5357278
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249965007370584089, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
+      propertyPath: easeCurve.m_Curve.Array.data[1].value
+      value: 0.060658485
+      objectReference: {fileID: 0}
     - target: {fileID: 8395859722338165493, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4249965007370584089, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f751593177e83345b91c9ce5106c5ab, type: 3}
 --- !u!4 &130988304636247484 stripped
 Transform:

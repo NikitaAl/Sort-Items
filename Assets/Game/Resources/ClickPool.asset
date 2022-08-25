@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ClickPool
   m_EditorClassIdentifier: 
   _size: 5
-  _clickPrefab: {fileID: 2868450815165139291, guid: 7e96fd08a2954444091e2584535dfd76, type: 3}
+  _clickPrefab: {fileID: 0}

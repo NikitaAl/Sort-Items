@@ -11,6 +11,8 @@ namespace SortItems
         
         // public GameObject _currentLevel;
         // public GameObject _nextlevel;
+        // public GameObject currentScene;
+        // public GameObject scenePrefab;
 
         public void LoadLevel()
         {
@@ -29,6 +31,12 @@ namespace SortItems
             // LoadLevel();
             // _currentLevel = Instantiate(_nextlevel);
             // Destroy(_currentLevel);
+
+                // if ( currentScene != null)
+                //     Destroy(currentScene);
+
+                // currentScene = Instantiate(scenePrefab);                           
+
         }
 
         // public void LoadLevel()

@@ -8,6 +8,7 @@ namespace SortItems
     {
         // [SerializeField] private GameObject[] _levels;
         // private GameObject _currentLevel;
+        // public GameObject _next;
 
         private void Start() 
         {
@@ -15,9 +16,9 @@ namespace SortItems
             // var idx = SceneManager.GetActiveScene().buildIndex;
             // if (level != idx)
             // {
-            //     LoadLevel(level);
+                // LoadLevel();
             // } 
-            // LoadLevel();
+            
             // _currentLevel = Instantiate(_levels);
         }
         
@@ -25,7 +26,11 @@ namespace SortItems
         // public void LoadLevel()
         // {
         //     if ( _currentLevel != null)
-        //     Destroy(_currentLevel);
+        //     {
+        //         Destroy(_currentLevel);
+        //         _next.SetActive(true);
+        //         Time.timeScale = 0f;
+        //     }
 
         //     var idx = SceneManager.GetActiveScene().buildIndex;
         //     var sceneCount = SceneManager.sceneCountInBuildSettings;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SortItems
 {
@@ -6,6 +7,7 @@ namespace SortItems
     {
         [SerializeField] private VPXPoolProvider _vpxPoolProvider;
        // [SerializeField] private GameObject _hideFxPrefab;
+       public UnityEvent OnHide;
 
         public void Hide()
         {
