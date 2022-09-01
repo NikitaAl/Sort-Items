@@ -50,7 +50,7 @@ PrefabInstance:
     - target: {fileID: 5738202529192130654, guid: 056db3d4367d1824290ccdf50fd2b099, type: 3}
       propertyPath: currentScene
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6400617573207818121}
     - target: {fileID: 5738202529192130654, guid: 056db3d4367d1824290ccdf50fd2b099, type: 3}
       propertyPath: _getters.Array.size
       value: 1

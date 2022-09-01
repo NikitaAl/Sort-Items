@@ -7,12 +7,16 @@ namespace SortItems
     public class ScoreHandler : MonoBehaviour
     {
         [SerializeField] private GetterParemeters[] _getters;
+        public CharacterAnimationPlayer _character;
+        // public GameObject currentScene;
+        // public GameObject scenePrefab;
+
+
         
-        public GameObject currentScene;
-        public GameObject scenePrefab;
+
+        public GameObject WinScreen;
 
         public UnityEvent onFull;
-        public GameObject _animator;
 
         private void Start() 
         {
@@ -26,8 +30,7 @@ namespace SortItems
             {
                 getter.getter.SetCount(getter.targetCount);
                 getter.getter.onCountChanged.AddListener(OnCountChanged);
-            }
-            
+            }      
         }
 
         private void OnDestroy() 
@@ -65,18 +68,18 @@ namespace SortItems
             if (full)
             {   
                 Debug.Log("You win!");
-                _animator.SetActive(true);
-                Time.timeScale = 0f;
                 onFull.Invoke();
+                WinScreen.SetActive(true);
+                
+                _character.PlayRumbaDancing();
+                    Debug.Log("Dancing");
+                // Time.timeScale = 0f;
 
-            //     Destroy(currentScene);
-
-
-            //     if ( currentScene != null)
-            //     {
-            //         currentScene = Instantiate(scenePrefab);   
-                                       
-            //     }
+                // Destroy(currentScene);
+                // if ( currentScene != null)
+                // {
+                //     currentScene = Instantiate(scenePrefab);                             
+                // }      
             }
         }
     }

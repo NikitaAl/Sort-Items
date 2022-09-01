@@ -10,19 +10,39 @@ namespace SortItems
         // private GameObject _currentLevel;
         // public GameObject _next;
 
-        private void Start() 
-        {
-            // var level = PlayerPrefs.GetInt("Level", 0);
-            // var idx = SceneManager.GetActiveScene().buildIndex;
-            // if (level != idx)
-            // {
-                // LoadLevel();
-            // } 
+        // private void Start() 
+        // {
+        //     var level = PlayerPrefs.GetInt("Level", 0);
+        //     var idx = SceneManager.GetActiveScene().buildIndex;
+        //     if (level != idx)
+        //     {
+        //         LoadLevel(level);
+        //     } 
             
-            // _currentLevel = Instantiate(_levels);
-        }
-        
+        // }
 
+        public void Nextlevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    
+        // public void LoadLevel(int levelIdx)
+        // {
+        //     var idx = SceneManager.GetActiveScene().buildIndex;
+        //     var sceneCount = SceneManager.sceneCountInBuildSettings;
+        //     var nextLevel = (levelIdx) % sceneCount;
+        //     SceneManager.LoadScene(nextLevel);
+        // }
+
+        // public void LoadNextLevel()
+        // {
+        //     var idx = SceneManager.GetActiveScene().buildIndex;
+        //     var sceneCount = SceneManager.sceneCountInBuildSettings;
+        //     var nextLevel = (idx + 1) % sceneCount;
+        //     PlayerPrefs.SetInt("Level", nextLevel);
+        //     SceneManager.LoadScene(nextLevel);
+
+        // }
         // public void LoadLevel()
         // {
         //     if ( _currentLevel != null)
@@ -62,23 +82,6 @@ namespace SortItems
         }
 
 
-        // public void LoadLevel(int levelIdx)
-        // {
-        //     var idx = SceneManager.GetActiveScene().buildIndex;
-        //     var sceneCount = SceneManager.sceneCountInBuildSettings;
-        //     var nextLevel = (levelIdx) % sceneCount;
-        //     SceneManager.LoadScene(nextLevel);
-        // }
-
-        // public void LoadNextLevel()
-        // {
-        //     var idx = SceneManager.GetActiveScene().buildIndex;
-        //     var sceneCount = SceneManager.sceneCountInBuildSettings;
-        //     var nextLevel = (idx + 1) % sceneCount;
-        //     PlayerPrefs.SetInt("Level", nextLevel);
-        //     SceneManager.LoadScene(nextLevel);
-
-        // }
 
     }
 }
