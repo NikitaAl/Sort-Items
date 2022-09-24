@@ -21,7 +21,7 @@ MonoBehaviour:
     texture: {fileID: 0}
   - name: Ball
     color: {r: 0.53207546, g: 0.9354762, b: 1, a: 1}
-    texture: {fileID: 2800000, guid: f560e871d0059a443b12da6635ded7a5, type: 3}
+    texture: {fileID: 2800000, guid: 14c9b7986e4b7ac45a8283b65b69cd40, type: 3}
   - name: BasketBall
     color: {r: 0.9433962, g: 0.41309237, b: 0.0035599153, a: 1}
-    texture: {fileID: 2800000, guid: d702271212158d141a0c218adf67c665, type: 3}
+    texture: {fileID: 2800000, guid: 1789d2e75bc6ca74c8d1683e5828bf1e, type: 3}

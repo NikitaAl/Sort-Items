@@ -6,6 +6,30 @@ namespace SortItems
 {
     public class SceneChanger : MonoBehaviour
     {
+
+        public void Nextlevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        public void OpenScene(int index)
+        {
+            SceneManager.LoadScene(index);
+        }
+    
+        public void ReloadScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        private void Update() 
+        {
+            if ( Input.GetKeyUp(KeyCode.R))
+            {
+                ReloadScene();          
+            }
+        }
+
         // [SerializeField] private GameObject[] _levels;
         // private GameObject _currentLevel;
         // public GameObject _next;
@@ -20,12 +44,6 @@ namespace SortItems
         //     } 
             
         // }
-
-        public void Nextlevel()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-    
         // public void LoadLevel(int levelIdx)
         // {
         //     var idx = SceneManager.GetActiveScene().buildIndex;
@@ -69,17 +87,6 @@ namespace SortItems
         //     LoadLevel();
         // }
 
-        public void ReloadScene()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
-        private void Update() {
-            if ( Input.GetKeyUp(KeyCode.R))
-            {
-                ReloadScene();          
-            }
-        }
 
 
 

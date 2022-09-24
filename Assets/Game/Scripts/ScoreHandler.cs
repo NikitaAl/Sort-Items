@@ -14,10 +14,14 @@ namespace SortItems
         [SerializeField] private TMP_Text _text;
         [SerializeField] private ItemTypeColor _typeColor;
 
+        [SerializeField] private GameObject _gette;
+
         public GameObject WinScreen;
         public GameObject MenuScreen;
 
         public UnityEvent onFull;
+
+        [SerializeField] private GameObject _stars;
 
         private void Start() 
         {
@@ -90,15 +94,22 @@ namespace SortItems
             if (full)
             {   
                 Debug.Log("You win!");
+
                 onFull.Invoke();
+                _stars.SetActive(true);
                 MenuScreen.SetActive(false);
                 WinScreen.SetActive(true);
-                
+                _gette.SetActive(false);
+
+                if (!PlayerPrefs.HasKey("Lvl") || PlayerPrefs.GetInt("Lvl") < SceneManager.GetActiveScene().buildIndex)
+                    PlayerPrefs.SetInt("Lvl", SceneManager.GetActiveScene().buildIndex);
+
                 _character.PlayRumbaDancing();
                     Debug.Log("Dancing");
                 // Time.timeScale = 0f;      
             }
         }
+
     }
 
 
