@@ -3,7 +3,8 @@ namespace SortItems
     public enum ItemType
     {
         red,
-
-        Blue
+        Blue,
+        Ball,
+        BasketBall
     }
 }

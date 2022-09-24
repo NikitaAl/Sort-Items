@@ -2804,6 +2804,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1734508533}
     - target: {fileID: 4721689076472116182, guid: c49688d1b15b3e2479abf9f923eca799, type: 3}
+      propertyPath: MenuScreen
+      value: 
+      objectReference: {fileID: 1258604653}
+    - target: {fileID: 4721689076472116182, guid: c49688d1b15b3e2479abf9f923eca799, type: 3}
       propertyPath: _character
       value: 
       objectReference: {fileID: 1384777030}
@@ -2887,7 +2891,8 @@ PrefabInstance:
       propertyPath: onCountChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1572633511990523664, guid: c49688d1b15b3e2479abf9f923eca799, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c49688d1b15b3e2479abf9f923eca799, type: 3}
 --- !u!1 &1074905073 stripped
 GameObject:

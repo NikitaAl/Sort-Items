@@ -114,3 +114,4 @@ MonoBehaviour:
   onCountChanged:
     m_PersistentCalls:
       m_Calls: []
+  _typeColor: {fileID: 11400000, guid: 6e172e689a1bf234cb13e455b38ff00b, type: 2}

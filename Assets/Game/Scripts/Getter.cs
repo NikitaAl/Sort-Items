@@ -22,6 +22,10 @@ namespace SortItems
 
         public UnityEvent<Getter> onCountChanged;
 
+        public ItemType Type { get => type; }
+
+        [SerializeField] private ItemTypeColor _typeColor;
+
         public void SetCount(int value)
         {
             targetCount = value;
@@ -35,6 +39,16 @@ namespace SortItems
 
         private void Start() {
             _material = GetComponent<MeshRenderer>().material;
+            if (_typeColor.colors[(int)Type].texture != null)
+            {
+                _material.mainTexture = _typeColor.colors[(int)Type].texture;
+                _material.color = Color.white;
+            }
+            else
+            {
+                _material.color = _typeColor.colors[(int)Type].color;
+            }
+            
             _defaultColor = _material.color;
         }
 
@@ -49,13 +63,13 @@ namespace SortItems
             {
                 _item = item;
 
-                if ( _item.Type == type)
+                if ( _item.Type == Type)
                 {
                     _material.color = Color.green;
                 }
                 else
                 {
-                    _material.color = Color.black;
+                    _material.color = Color.red;
                 }
 
                 return;
@@ -92,7 +106,7 @@ namespace SortItems
 
         private void TryGetItem()
         {
-            if ( _item.Type == type)
+            if ( _item.Type == Type)
             {
                 count++;
                 if (count >= targetCount)

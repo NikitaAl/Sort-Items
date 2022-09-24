@@ -1,3 +1,5 @@
+using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -8,18 +10,18 @@ namespace SortItems
     {
         [SerializeField] private GetterParemeters[] _getters;
         public CharacterAnimationPlayer _character;
-        // public GameObject currentScene;
-        // public GameObject scenePrefab;
 
-
-        
+        [SerializeField] private TMP_Text _text;
+        [SerializeField] private ItemTypeColor _typeColor;
 
         public GameObject WinScreen;
+        public GameObject MenuScreen;
 
         public UnityEvent onFull;
 
         private void Start() 
         {
+            MenuScreen.SetActive(true);
             if (_getters == null)
             {
                 Debug.LogError("Getters is null");
@@ -30,7 +32,27 @@ namespace SortItems
             {
                 getter.getter.SetCount(getter.targetCount);
                 getter.getter.onCountChanged.AddListener(OnCountChanged);
-            }      
+            }   
+
+            StringBuilder builder = new StringBuilder("Collect ");
+            builder.Append("<color=#")
+                    .Append(ColorUtility.ToHtmlStringRGB(_typeColor.colors[(int)_getters[0].getter.Type].color))
+                    .Append(">")
+                    .Append(_getters[0].getter.Type.ToString().ToLower());
+            if (_getters.Length > 1)
+            {
+                for (int i = 1; i < _getters.Length; i++)
+                {
+                    builder.Append("<color=\"white\">")
+                            .Append(" and ")
+                            .Append("<color=#")
+                            .Append(ColorUtility.ToHtmlStringRGB(_typeColor.colors[(int)_getters[i].getter.Type].color))
+                            .Append(">")
+                            .Append(_getters[i].getter.Type.ToString().ToLower());
+                }
+            }
+
+            _text.text = builder.ToString();
         }
 
         private void OnDestroy() 
@@ -69,17 +91,12 @@ namespace SortItems
             {   
                 Debug.Log("You win!");
                 onFull.Invoke();
+                MenuScreen.SetActive(false);
                 WinScreen.SetActive(true);
                 
                 _character.PlayRumbaDancing();
                     Debug.Log("Dancing");
-                // Time.timeScale = 0f;
-
-                // Destroy(currentScene);
-                // if ( currentScene != null)
-                // {
-                //     currentScene = Instantiate(scenePrefab);                             
-                // }      
+                // Time.timeScale = 0f;      
             }
         }
     }
