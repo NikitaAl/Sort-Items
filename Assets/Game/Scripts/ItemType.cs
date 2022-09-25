@@ -5,6 +5,8 @@ namespace SortItems
         red,
         Blue,
         Ball,
-        BasketBall
+        BasketBall,
+        Watermelon,
+        Lime
     }
 }

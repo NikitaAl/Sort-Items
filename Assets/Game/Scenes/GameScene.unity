@@ -2829,8 +2829,6 @@ MonoBehaviour:
   countdown: 30
   _character: {fileID: 371240783}
   _getters: {fileID: 2088179805}
-  musicSource: {fileID: 134345109}
-  soundSource: {fileID: 538940662}
 --- !u!1 &1270720583
 GameObject:
   m_ObjectHideFlags: 0
