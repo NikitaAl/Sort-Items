@@ -7,6 +7,10 @@ namespace SortItems
         Ball,
         BasketBall,
         Watermelon,
-        Lime
+        Lime,
+        pear,
+        donut,
+        grass,
+        banana
     }
 }
